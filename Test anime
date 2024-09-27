@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime-Themed Website</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Comfortaa&display=swap" rel="stylesheet"> <!-- Anime-style fonts -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Anime World</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="hero">
+                <h2>Welcome to Anime World</h2>
+                <p>Your one-stop destination for all things anime!</p>
+                <button class="cta">Explore Now</button>
+            </div>
+        </section>
+
+        <section id="characters">
+            <h2>Featured Characters</h2>
+            <div class="character-grid">
+                <!-- Character Cards -->
+                <div class="character-card">
+                    <img src="character1.png" alt="Character 1">
+                    <h3>Character 1</h3>
+                </div>
+                <div class="character-card">
+                    <img src="character2.png" alt="Character 2">
+                    <h3>Character 2</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Anime Gallery</h2>
+            <div class="gallery-grid">
+                <img src="gallery1.jpg" alt="Anime Scene 1">
+                <img src="gallery2.jpg" alt="Anime Scene 2">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Anime World | All rights reserved</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Link to JavaScript -->
+</body>
+</html>
+
+/* Anime-inspired fonts */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    margin: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #ff66b2;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f4f4f4;
+}
+
+/* Hero section */
+.hero {
+    background-image: url('anime-bg.jpg'); /* Use an anime background image */
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    font-family: 'Comfortaa', cursive;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta {
+    background-color: #ff66b2;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #ff3385;
+}
+
+/* Character grid */
+.character-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.character-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.character-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.character-card h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Gallery section */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const ctaButton = document.querySelector('.cta');
+
+    ctaButton.addEventListener('click', function() {
+        alert('Get ready to explore the anime world!');
+    });
+});
